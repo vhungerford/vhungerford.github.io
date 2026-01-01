@@ -5,7 +5,7 @@ url: "https://vhungerford.github.io"
 
 # Build settings
 markdown: kramdown
-theme: architect
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
