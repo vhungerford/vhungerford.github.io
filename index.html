@@ -2,13 +2,14 @@
 layout: default
 ---
 
-<h1>Blog Posts</h1>
+<h1>Pages</h1>
 
+<h3>
 <ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span>— {{ post.date | date: "%Y-%m-%d" }}</span>
-    </li>
+  {% for p in site.pages %}
+    {% if p.title and p.published != false and p.url != page.url and p.url != '/404.html' %}
+      <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+    {% endif %}
   {% endfor %}
 </ul>
+</h1>
